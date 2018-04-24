@@ -1,0 +1,24 @@
+POP3 server:
+Autor - Jakub Handzuš, xhandz00
+
+Rozšírenia:
+	príkaz TOP
+
+Príklady použitia:
+./popser -a auth.txt -p 4242 -d Maildir
+./popser -a auth.txt -c -p 4242 -d Maildir -r
+./popser -h
+./popser -r
+
+Zoznam odovzdaných súborov:
+Makefile
+arguments.cpp
+commands.cpp
+file_master.cpp
+fsm.cpp
+md5.cpp
+md5.h
+net.cpp
+popser.cpp
+popser.h
+readme.txt
