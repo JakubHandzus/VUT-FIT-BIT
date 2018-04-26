@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="solitaire" default="compile" basedir=".">
+
+	<property name="src.dir" location="src" />
+	<property name="build.dir" location="build" />
+	<property name="lib.dir" location="lib" />
+	<property name="jar.dir" location="dest-client" />
+	<property name="doc.dir" location="doc" />
+
+
+	<target name="clean">
+		<delete dir="${build.dir}" />
+	</target>
+
+	<target name="makedir">
+		<mkdir dir="${build.dir}" />
+	</target>
+
+	<target name="delete">
+		<delete dir="${doc.dir}"/>
+		<mkdir dir="${doc.dir}"/>
+		<delete dir="${lib.dir}/img"/>
+		<delete dir="${build.dir}" />
+		<mkdir dir="${build.dir}" />
+		<delete dir="${jar.dir}" />
+		<mkdir dir="${jar.dir}" />
+	</target>
+
+	<target name="build" depends="clean, makedir">
+		<javac srcdir="${src.dir}" destdir="${build.dir}" includeantruntime="false">
+		</javac>
+
+	</target>
+
+	<target name="download">
+		<chmod file="${lib.dir}/get-libs.sh" perm="+x"/>
+		<exec executable="${lib.dir}/get-libs.sh"/>
+	</target>
+
+	<target name="doc">
+		<javadoc destdir="${doc.dir}"> 
+			<fileset dir="${src.dir}" includes="**/*.java"/> 
+		</javadoc> 
+	</target>
+
+	<target name="compile" depends="download, build, doc">
+		<jar destfile = "${jar.dir}/ija-client.jar"
+			basedir = "${build.dir}">
+			
+			<fileset dir="${lib.dir}/img"/>
+			
+			<manifest>
+				<attribute name = "Main-Class" value = "src.gui.BoardGui"/>
+			</manifest>
+
+		</jar>
+	</target>
+
+	<target name="run">
+		<exec executable="java">
+			<arg line="-jar ${jar.dir}/ija-client.jar"/>
+		</exec>
+	</target>
+	
+</project>
