@@ -2,4 +2,6 @@
 Kartova hra Klondike Solitaire s grafickym uzivatelskym rozhranim
 Autori - Martina Gryzbowska (xgrzyb00), Jakub Handzus (xhandz00)
 
-![Game preview](https://github.com/JakubHandzus/VUT-FIT-BIT/blob/master/2BIT_4th_term/IJA/Klondike_Solitaire(Java)/4hry.PNG)
+![Game preview](https://github.com/JakubHandzus/VUT-FIT-BIT/blob/master/2BIT_4th_term/IJA/Klondike_Solitaire(Java)/lib/screenshots/initial.png)
+![Game preview](https://github.com/JakubHandzus/VUT-FIT-BIT/blob/master/2BIT_4th_term/IJA/Klondike_Solitaire(Java)/lib/screenshots/game.png)
+![Game preview](https://github.com/JakubHandzus/VUT-FIT-BIT/blob/master/2BIT_4th_term/IJA/Klondike_Solitaire(Java)/lib/screenshots/four_games.png)
